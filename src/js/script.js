@@ -1,5 +1,8 @@
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
+
+
+
 {
   'use strict';
 
@@ -72,6 +75,7 @@
       console.log(generatedHTML);
 
       thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+      console.log(thisProduct.element);
 
       const menuContainer = document.querySelector(select.containerOf.menu);
 
@@ -81,17 +85,26 @@
 
     initAccordion() {
       const thisProduct = this;
+      console.log(thisProduct);
 
-      const clickedElement = document.querySelectorAll(select.menuProduct.clickable);
-      console.log(clickedElement);
+      const clickableTrigger  = thisProduct.element.querySelector(select.menuProduct.clickable);
 
-      for (let trigger of clickedElement) {
-        trigger.addEventListener('click', function () {
-          console.log('dziala');
-        })
-      }
+      clickableTrigger.addEventListener('click', function (event) {
 
+        event.preventDefault();
 
+        const activeProduct = document.querySelector(select.all.menuProductsActive);
+        console.log(activeProduct);
+
+        if (activeProduct && activeProduct != thisProduct.element) {
+
+          activeProduct.classList.remove(classNames.menuProduct.wrapperActive);
+
+        }
+
+        thisProduct.element.classList.toggle(classNames.menuProduct.wrapperActive);
+
+      })
     }
   }
 
