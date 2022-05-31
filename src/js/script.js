@@ -73,7 +73,7 @@
     amountWidget: {
       defaultValue: 1,
       defaultMin: 1,
-      defaultMax: 9,
+      defaultMax: 10,
     }, // CODE CHANGED
     // CODE ADDED START
     cart: {
@@ -254,7 +254,7 @@
       console.log('constructor arguments : ', element);
 
       thisWidget.getElements(element);
-      thisWidget.setValue(thisWidget.input.value);
+      thisWidget.setValue(settings.amountWidget.defaultValue);
       thisWidget.initActions();
 
 
@@ -279,13 +279,13 @@
 
       const max = settings.amountWidget.defaultMax;
       const min = settings.amountWidget.defaultMin;
-      const defaultValue = settings.amountWidget.defaultValue;
 
-      thisWidget.value = defaultValue;
 
-      if(thisWidget.value !== newValue && !isNaN(newValue) && newValue >= min && newValue <= max){
+      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= min && newValue <= max) {
+
         thisWidget.value = newValue;
       }
+
       thisWidget.input.value = thisWidget.value;
 
       thisWidget.announce();
