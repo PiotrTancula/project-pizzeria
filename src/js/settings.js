@@ -43,6 +43,11 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    // sam sobie dodalem div gdzie sa wszystkei stoliki
+    wholeTables: '.floor-plan',
+    phone: '[name="phone"]',
+    address: '[name="address"]',
+    submitButton: 'btn-secondary'
   },
   nav: {
     links: '.main-nav a',
@@ -115,8 +120,8 @@ export const settings = {
     url: '//localhost:3131',
     products: 'products',
     orders: 'orders',
-    booking: 'bookings',
-    event: 'events',
+    bookings: 'bookings',
+    events: 'events',
     dateStartParamKey: 'date_gte',
     dateEndParamKey: 'date_lte',
     notRepeatParam: 'repeat=false',

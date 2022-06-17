@@ -87,7 +87,7 @@ const app = {
 
     for (let productData in thisApp.data.products) {
       new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
-      console.log(productData, thisApp.data.products[productData]);
+      // console.log(productData, thisApp.data.products[productData]);
     }
 
   },
