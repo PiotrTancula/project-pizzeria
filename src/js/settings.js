@@ -52,7 +52,7 @@ export const select = {
     submitButton: 'btn-secondary'
   },
   nav: {
-    links: '.main-nav a',
+    links: '.main-nav a, .twoimages a',
   },
 
   // CODE ADDED START

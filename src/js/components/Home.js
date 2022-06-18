@@ -29,13 +29,14 @@ class Home{
     const elem = document.querySelector('.main-carousel');
     // eslint-disable-next-line no-unused-vars
     // eslint-disable-next-line no-undef
-    // eslint-disable-next-line no-unused-vars
-    // eslint-disable-next-line no-undef
     thisHome.flkty = new Flickity( elem, {
       // options
       cellAlign: 'left',
       contain: true,
-      autoPlay: true
+      autoPlay: true,
+      prevNextButtons: false,
+      freeScroll: true,
+      wrapAround: true,
     });
 
 
