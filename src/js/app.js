@@ -142,6 +142,7 @@ const app = {
   },
 
   initHome: function () {
+
     const thisApp = this;
     thisApp.homeWidget = document.querySelector(select.containerOf.home);
     // eslint-disable-next-line no-unused-vars
